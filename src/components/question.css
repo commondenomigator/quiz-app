@@ -1,0 +1,16 @@
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.question {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-top-style: solid;
+  border-top-color: darkgray;
+  border-top-width: 1px;
+}

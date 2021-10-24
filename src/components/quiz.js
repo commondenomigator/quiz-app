@@ -45,7 +45,9 @@ function Quiz() {
       <div>
         <Question index={i} question={question} handleSelect={handleSelect} />
         {editing ? (
-          <button onClick={() => deleteQuestion(i)}>Delete</button>
+          <button className="delete" onClick={() => deleteQuestion(i)}>
+            Delete
+          </button>
         ) : null}
       </div>
     ))
@@ -89,12 +91,20 @@ function Quiz() {
       </button>
       <h1>Quiz: Fun facts!</h1>
       {renderQuestions()}
-      <button onClick={submit}>Submit</button>
-      {newQuestion ? (
-        <NewQuestion submit={addQuestion} />
-      ) : (
-        <button onClick={() => setNewQuestion(true)}>Add new question</button>
-      )}
+      <div className="topborder">
+        {editing ? (
+          newQuestion ? (
+            <NewQuestion submit={addQuestion} />
+          ) : (
+            <button onClick={() => setNewQuestion(true)}>
+              Add new question
+            </button>
+          )
+        ) : null}
+        <button className="submit" onClick={submit}>
+          Submit Answers
+        </button>
+      </div>
     </div>
   )
 }

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react"
 
+import "./newQuestion.css"
+
 function NewQuestion({ submit }) {
   const [text, setText] = useState([])
   const [answers, setAnswers] = useState([])
@@ -13,7 +15,7 @@ function NewQuestion({ submit }) {
 
   function renderAnswers() {
     return answers.map((a, i) => (
-      <div>
+      <div className="flex">
         <input
           type="radio"
           name="answers"
@@ -24,6 +26,7 @@ function NewQuestion({ submit }) {
           type="text"
           value={a}
           onChange={(e) => updateAnswer(e.target.value, i)}
+          className="answerinput round"
         />
       </div>
     ))
@@ -44,18 +47,25 @@ function NewQuestion({ submit }) {
   }
 
   return (
-    <div>
-      <input
-        type="text"
+    <span>
+      <label className="block" htmlFor={text}>
+        Question:{" "}
+      </label>
+      <textarea
+        cols="40"
+        rows="3"
         value={text}
+        className="questioninput round"
         onChange={(e) => setText(e.target.value)}
       />
       {renderAnswers()}
       <button onClick={(e) => setAnswers(answers.concat([""]))}>
         New Answer
       </button>
-      <button onClick={(e) => onSubmit()}>Submit</button>
-    </div>
+      <button className="addquestion" onClick={(e) => onSubmit()}>
+        Add Question
+      </button>
+    </span>
   )
 }
 

@@ -1,5 +1,7 @@
 import React from "react"
 
+import "./question.css"
+
 function Question({ index, question, handleSelect }) {
   function renderAnswers() {
     return (
@@ -20,7 +22,7 @@ function Question({ index, question, handleSelect }) {
   }
 
   return (
-    <div>
+    <div className="question">
       <h2>Question {index}</h2>
       <p>{question.text}</p>
       {renderAnswers()}

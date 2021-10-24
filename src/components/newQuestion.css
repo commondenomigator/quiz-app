@@ -1,0 +1,31 @@
+.block {
+  display: block;
+}
+
+span {
+  width: fit-content;
+}
+
+.questioninput {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.round {
+  border-radius: 5px;
+}
+
+.flex {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.answerinput {
+  flex: 1;
+}
+
+.addquestion {
+  position: absolute;
+  right: 20px;
+}

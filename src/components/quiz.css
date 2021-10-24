@@ -1,11 +1,11 @@
 .quiz {
   position: relative;
   width: 50%;
-  background-color: #fbfbf2;
+  background-color: lightblue;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
   margin: 2em auto 2em auto;
   padding: 2em;
+  padding-top: 0;
   border-radius: 10px;
 }
 
@@ -13,4 +13,25 @@
   position: absolute;
   top: 5px;
   right: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  margin-bottom: 5px;
+}
+
+.submit {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
+}
+
+.topborder {
+  border-top-style: solid;
+  border-top-color: darkgray;
+  border-top-width: 1px;
+  padding-top: 5px;
 }
