@@ -1,17 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 
 import "./newQuestion.css"
 
 function NewQuestion({ submit }) {
-  const [text, setText] = useState([])
+  const [text, setText] = useState("")
   const [answers, setAnswers] = useState([])
-  const [correct, setCorrect] = useState([])
-
-  useEffect(() => {
-    setText("")
-    setAnswers([])
-    setCorrect(-1)
-  }, [])
+  const [correct, setCorrect] = useState(-1)
 
   function renderAnswers() {
     return answers.map((a, i) => (

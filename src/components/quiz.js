@@ -8,29 +8,26 @@ import "./quiz.css"
 function Quiz() {
   const [questions, setQuestions] = useState([])
   const [selectedAnswers, setSelectedAnswers] = useState([])
-  const [index, setIndex] = useState([])
-  const [editing, setEditing] = useState([])
-  const [newQuestion, setNewQuestion] = useState([])
+  const [index, setIndex] = useState(0)
+  const [editing, setEditing] = useState(false)
+  const [newQuestion, setNewQuestion] = useState(false)
 
   useEffect(function () {
     const dummyQuestions = [
       {
-        text: "What is life?",
-        answers: ["Good", "Bad"],
-        correct: 0,
+        text: "When was UC Berkeley founded?",
+        answers: ["1853", "1868", "1890", "1902"],
+        correct: 1,
       },
       {
-        text: "What is no",
-        answers: ["Yes", "No", "Maybe"],
-        correct: 1,
+        text: "Which is largest?",
+        answers: ["Snail", "Cat", "Human"],
+        correct: 2,
       },
     ]
 
     setQuestions(dummyQuestions)
     setSelectedAnswers(dummyQuestions.map(() => -1))
-    setIndex(0)
-    setEditing(false)
-    setNewQuestion(false)
   }, [])
 
   const handleSelect = (i, val) => {
